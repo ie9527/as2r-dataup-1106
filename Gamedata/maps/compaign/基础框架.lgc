@@ -1,0 +1,20 @@
+#include "gamedata\scripts\common\common.lgc"
+#include "gamedata\scripts\common\common_compaign.lgc"
+
+
+main()
+{
+  iff(1)
+  {
+    SetMapTypeEx( MAP_TYPE_LEVEL, "Level_01" );
+    InitGame();
+  }
+  if( GameTact() )
+    return;
+
+  QuestsTact();
+  CompaignGameTact();
+
+
+
+}
