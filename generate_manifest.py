@@ -3,14 +3,15 @@ import hashlib
 import json
 from datetime import datetime
 
-# 你的资源目录（改这里）
+# 只扫描游戏资源目录
 BASE_DIR = "Gamedata"
 
-# 输出
+# 输出 manifest
 OUTPUT = "manifest.json"
 
-# 改成你的仓库地址
-RAW_BASE = "https://raw.githubusercontent.com/你的用户名/你的仓库/main/Gamedata"
+# 下载根地址（必须对应 BASE_DIR）
+RAW_BASE = "https://raw.githubusercontent.com/ie9527/as2r-dataup-1106/main/Gamedata"
+
 
 def md5(file_path):
     h = hashlib.md5()
@@ -19,9 +20,11 @@ def md5(file_path):
             h.update(chunk)
     return h.hexdigest()
 
+
 def generate():
     manifest = {
         "version": datetime.utcnow().strftime("%Y.%m.%d.%H%M"),
+        "base": "Gamedata",   # ⭐ 新增：标识根目录（很重要）
         "files": []
     }
 
@@ -29,6 +32,7 @@ def generate():
         for file in files:
             full_path = os.path.join(root, file)
 
+            # 相对 Gamedata 的路径
             rel_path = os.path.relpath(full_path, BASE_DIR)
             rel_path = rel_path.replace("\\", "/")
 
@@ -42,6 +46,7 @@ def generate():
         json.dump(manifest, f, indent=2, ensure_ascii=False)
 
     print("manifest generated")
+
 
 if __name__ == "__main__":
     generate()
