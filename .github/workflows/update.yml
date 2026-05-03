@@ -1,0 +1,30 @@
+name: Auto Generate Manifest
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Run script
+        run: python generate_manifest.py
+
+      - name: Commit manifest
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add manifest.json
+          git commit -m "auto update manifest" || echo "no changes"
+          git push
