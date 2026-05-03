@@ -7,20 +7,27 @@ on:
 
 jobs:
   build:
+    # 防止自己提交 manifest 时再次触发（死循环）
+    if: "!contains(github.event.head_commit.message, 'auto update manifest')"
+
     runs-on: ubuntu-latest
 
     steps:
+      # 1. 拉取仓库代码
       - name: Checkout
         uses: actions/checkout@v3
 
+      # 2. 安装 Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
 
-      - name: Run script
+      # 3. 运行你的 manifest 脚本
+      - name: Generate manifest
         run: python generate_manifest.py
 
+      # 4. 提交生成的 manifest.json
       - name: Commit manifest
         run: |
           git config --global user.name "github-actions"
