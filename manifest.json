@@ -1,7 +1,12 @@
 {
-  "version": "2026.05.08.1653",
+  "version": "2026.05.08.1656",
   "base": "Gamedata",
   "files": [
+    {
+      "path": "maps/compaign/dataup.map",
+      "md5": "b6445a904355dbb0504bbe5b6c5d75d7",
+      "url": "https://raw.githubusercontent.com/ie9527/as2r-dataup-1106/main/Gamedata/maps/compaign/dataup.map"
+    },
     {
       "path": "maps/compaign/基础框架.lgc",
       "md5": "a9190188e5ce60b429a0596e1306a6d2",
