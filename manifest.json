@@ -1,10 +1,10 @@
 {
-  "version": "2026.05.08.1510",
+  "version": "2026.05.08.1653",
   "base": "Gamedata",
   "files": [
     {
       "path": "maps/compaign/基础框架.lgc",
-      "md5": "b0bbd0362c5284501a21f1bafb1890cf",
+      "md5": "a9190188e5ce60b429a0596e1306a6d2",
       "url": "https://raw.githubusercontent.com/ie9527/as2r-dataup-1106/main/Gamedata/maps/compaign/基础框架.lgc"
     }
   ]
