@@ -1,10 +1,10 @@
 {
-  "version": "2026.05.09.0854",
+  "version": "2026.05.09.0859",
   "base": "Gamedata",
   "files": [
     {
       "path": "text/测试自定义文件更新.txt",
-      "md5": "9c0973c6a65f5bfb22754390638d6bcd",
+      "md5": "91778265c9e0d861de56dbe82e9da830",
       "url": "https://raw.githubusercontent.com/ie9527/as2r-dataup-1106/main/Gamedata/text/测试自定义文件更新.txt"
     },
     {
