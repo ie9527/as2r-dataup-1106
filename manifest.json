@@ -1,5 +1,5 @@
 {
-  "version": "2026.05.10.0741",
+  "version": "2026.05.10.0742",
   "base": "Gamedata",
   "files": [
     {
@@ -11,6 +11,11 @@
       "path": "测试/1.MD",
       "md5": "60b725f10c9c85c70d97880dfe8191b3",
       "url": "https://raw.githubusercontent.com/ie9527/as2r-dataup-1106/main/Gamedata/测试/1.MD"
+    },
+    {
+      "path": "测试/Level_05.map",
+      "md5": "889c692b3a9496971a676b68f34f248f",
+      "url": "https://raw.githubusercontent.com/ie9527/as2r-dataup-1106/main/Gamedata/测试/Level_05.map"
     },
     {
       "path": "maps/compaign/dataup.map",
