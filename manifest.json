@@ -1,11 +1,16 @@
 {
-  "version": "2026.05.09.1129",
+  "version": "2026.05.10.0741",
   "base": "Gamedata",
   "files": [
     {
       "path": "text/测试自定义文件更新.txt",
       "md5": "91778265c9e0d861de56dbe82e9da830",
       "url": "https://raw.githubusercontent.com/ie9527/as2r-dataup-1106/main/Gamedata/text/测试自定义文件更新.txt"
+    },
+    {
+      "path": "测试/1.MD",
+      "md5": "60b725f10c9c85c70d97880dfe8191b3",
+      "url": "https://raw.githubusercontent.com/ie9527/as2r-dataup-1106/main/Gamedata/测试/1.MD"
     },
     {
       "path": "maps/compaign/dataup.map",
